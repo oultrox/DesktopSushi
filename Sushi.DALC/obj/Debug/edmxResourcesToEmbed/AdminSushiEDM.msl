@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AdminSushiModelStoreContainer" CdmEntityContainer="AdminSushiEntities">
+    <EntitySetMapping Name="DIRECCION">
+      <EntityTypeMapping TypeName="AdminSushiModel.DIRECCION">
+        <MappingFragment StoreEntitySet="DIRECCION">
+          <ScalarProperty Name="IDDIRECCION" ColumnName="IDDIRECCION" />
+          <ScalarProperty Name="COMUNA" ColumnName="COMUNA" />
+          <ScalarProperty Name="PROVINCIA" ColumnName="PROVINCIA" />
+          <ScalarProperty Name="REGION" ColumnName="REGION" />
+          <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+          <ScalarProperty Name="NUMERO" ColumnName="NUMERO" />
+          <ScalarProperty Name="DEPTO" ColumnName="DEPTO" />
+          <ScalarProperty Name="DETALLEDIRECCION" ColumnName="DETALLEDIRECCION" />
+          <ScalarProperty Name="USUARIO_IDUSUARIO" ColumnName="USUARIO_IDUSUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVENTARIO">
+      <EntityTypeMapping TypeName="AdminSushiModel.INVENTARIO">
+        <MappingFragment StoreEntitySet="INVENTARIO">
+          <ScalarProperty Name="IDINVENTARIO" ColumnName="IDINVENTARIO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NIVELUSUARIO">
+      <EntityTypeMapping TypeName="AdminSushiModel.NIVELUSUARIO">
+        <MappingFragment StoreEntitySet="NIVELUSUARIO">
+          <ScalarProperty Name="IDNIVELUSUARIO" ColumnName="IDNIVELUSUARIO" />
+          <ScalarProperty Name="NOMBRENIVELUSUARIO" ColumnName="NOMBRENIVELUSUARIO" />
+          <ScalarProperty Name="DESCRIPCIONNIVELUSUARIO" ColumnName="DESCRIPCIONNIVELUSUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PEDIDO">
+      <EntityTypeMapping TypeName="AdminSushiModel.PEDIDO">
+        <MappingFragment StoreEntitySet="PEDIDO">
+          <ScalarProperty Name="IDPEDIDO" ColumnName="IDPEDIDO" />
+          <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="DETALLE" ColumnName="DETALLE" />
+          <ScalarProperty Name="DIRECCION_IDDIRECCION" ColumnName="DIRECCION_IDDIRECCION" />
+          <ScalarProperty Name="USUARIO_IDUSUARIO" ColumnName="USUARIO_IDUSUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCTO">
+      <EntityTypeMapping TypeName="AdminSushiModel.PRODUCTO">
+        <MappingFragment StoreEntitySet="PRODUCTO">
+          <ScalarProperty Name="IDPRODUCTO" ColumnName="IDPRODUCTO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+          <ScalarProperty Name="PEDIDO_IDPEDIDO" ColumnName="PEDIDO_IDPEDIDO" />
+          <ScalarProperty Name="INVENTARIO_IDINVENTARIO" ColumnName="INVENTARIO_IDINVENTARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIO">
+      <EntityTypeMapping TypeName="AdminSushiModel.USUARIO">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="RUT" ColumnName="RUT" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDOPATERNO" ColumnName="APELLIDOPATERNO" />
+          <ScalarProperty Name="PASS" ColumnName="PASS" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="ACTIVADO" ColumnName="ACTIVADO" />
+          <ScalarProperty Name="NIVELUSUARIO_IDNIVELUSUARIO" ColumnName="NIVELUSUARIO_IDNIVELUSUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

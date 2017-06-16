@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sushi.DALC", "Sushi.DALC\Sushi.DALC.csproj", "{3E372DB8-8834-4AA4-A584-F2335756C887}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sushi.WPF", "SushiWPF\Sushi.WPF.csproj", "{8FE4229D-F734-4D28-A2DB-192BCA7103AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sushi.Negocio", "Sushi.Negocio\Sushi.Negocio.csproj", "{7AB01C7A-BD03-4D6C-9DE7-0A7848908EAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E372DB8-8834-4AA4-A584-F2335756C887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E372DB8-8834-4AA4-A584-F2335756C887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E372DB8-8834-4AA4-A584-F2335756C887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E372DB8-8834-4AA4-A584-F2335756C887}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FE4229D-F734-4D28-A2DB-192BCA7103AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FE4229D-F734-4D28-A2DB-192BCA7103AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FE4229D-F734-4D28-A2DB-192BCA7103AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FE4229D-F734-4D28-A2DB-192BCA7103AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AB01C7A-BD03-4D6C-9DE7-0A7848908EAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AB01C7A-BD03-4D6C-9DE7-0A7848908EAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AB01C7A-BD03-4D6C-9DE7-0A7848908EAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AB01C7A-BD03-4D6C-9DE7-0A7848908EAB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

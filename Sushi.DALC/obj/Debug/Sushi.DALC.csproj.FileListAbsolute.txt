@@ -1,0 +1,8 @@
+C:\Users\Yisus\Documents\Visual Studio 2015\Projects\AdminSushiProject\Sushi.DALC\bin\Debug\Sushi.DALC.dll.config
+C:\Users\Yisus\Documents\Visual Studio 2015\Projects\AdminSushiProject\Sushi.DALC\bin\Debug\Sushi.DALC.dll
+C:\Users\Yisus\Documents\Visual Studio 2015\Projects\AdminSushiProject\Sushi.DALC\bin\Debug\Sushi.DALC.pdb
+C:\Users\Yisus\Documents\Visual Studio 2015\Projects\AdminSushiProject\Sushi.DALC\bin\Debug\EntityFramework.dll
+C:\Users\Yisus\Documents\Visual Studio 2015\Projects\AdminSushiProject\Sushi.DALC\bin\Debug\EntityFramework.xml
+C:\Users\Yisus\Documents\Visual Studio 2015\Projects\AdminSushiProject\Sushi.DALC\obj\Debug\Sushi.DALC.csprojResolveAssemblyReference.cache
+C:\Users\Yisus\Documents\Visual Studio 2015\Projects\AdminSushiProject\Sushi.DALC\obj\Debug\Sushi.DALC.dll
+C:\Users\Yisus\Documents\Visual Studio 2015\Projects\AdminSushiProject\Sushi.DALC\obj\Debug\Sushi.DALC.pdb

@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AdminSushiModel.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DIRECCION">
+    <Key>
+      <PropertyRef Name="IDDIRECCION" />
+    </Key>
+    <Property Name="IDDIRECCION" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="COMUNA" Type="varchar2" MaxLength="15" Nullable="false" />
+    <Property Name="PROVINCIA" Type="varchar2" MaxLength="15" Nullable="false" />
+    <Property Name="REGION" Type="varchar2" MaxLength="15" Nullable="false" />
+    <Property Name="CALLE" Type="varchar2" MaxLength="45" Nullable="false" />
+    <Property Name="NUMERO" Type="varchar2" MaxLength="5" Nullable="false" />
+    <Property Name="DEPTO" Type="varchar2" MaxLength="5" />
+    <Property Name="DETALLEDIRECCION" Type="varchar2" MaxLength="45" />
+    <Property Name="USUARIO_IDUSUARIO" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="INVENTARIO">
+    <Key>
+      <PropertyRef Name="IDINVENTARIO" />
+    </Key>
+    <Property Name="IDINVENTARIO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="FECHA" Type="date" />
+  </EntityType>
+  <EntityType Name="NIVELUSUARIO">
+    <Key>
+      <PropertyRef Name="IDNIVELUSUARIO" />
+    </Key>
+    <Property Name="IDNIVELUSUARIO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRENIVELUSUARIO" Type="varchar2" MaxLength="45" Nullable="false" />
+    <Property Name="DESCRIPCIONNIVELUSUARIO" Type="varchar2" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="PEDIDO">
+    <Key>
+      <PropertyRef Name="IDPEDIDO" />
+    </Key>
+    <Property Name="IDPEDIDO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="VALOR" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="FECHA" Type="date" Nullable="false" />
+    <Property Name="ESTADO" Type="varchar2" MaxLength="45" Nullable="false" />
+    <Property Name="DETALLE" Type="varchar2" MaxLength="255" Nullable="false" />
+    <Property Name="DIRECCION_IDDIRECCION" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="USUARIO_IDUSUARIO" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PRODUCTO">
+    <Key>
+      <PropertyRef Name="IDPRODUCTO" />
+    </Key>
+    <Property Name="IDPRODUCTO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="45" Nullable="false" />
+    <Property Name="CANTIDAD" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="VALOR" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PEDIDO_IDPEDIDO" Type="number" Precision="38" Scale="0" />
+    <Property Name="INVENTARIO_IDINVENTARIO" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="IDUSUARIO" />
+    </Key>
+    <Property Name="IDUSUARIO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="RUT" Type="varchar2" MaxLength="45" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="15" Nullable="false" />
+    <Property Name="APELLIDOPATERNO" Type="varchar2" MaxLength="15" />
+    <Property Name="PASS" Type="varchar2" MaxLength="45" Nullable="false" />
+    <Property Name="EMAIL" Type="varchar2" MaxLength="45" Nullable="false" />
+    <Property Name="ACTIVADO" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="NIVELUSUARIO_IDNIVELUSUARIO" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <Association Name="DIRECCION_USUARIO_FK">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DIRECCION" Type="Self.DIRECCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="IDUSUARIO" />
+      </Principal>
+      <Dependent Role="DIRECCION">
+        <PropertyRef Name="USUARIO_IDUSUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PEDIDO_DIRECCION_FK">
+    <End Role="DIRECCION" Type="Self.DIRECCION" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PEDIDO" Type="Self.PEDIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DIRECCION">
+        <PropertyRef Name="IDDIRECCION" />
+      </Principal>
+      <Dependent Role="PEDIDO">
+        <PropertyRef Name="DIRECCION_IDDIRECCION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PEDIDO_USUARIO_FK">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PEDIDO" Type="Self.PEDIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="IDUSUARIO" />
+      </Principal>
+      <Dependent Role="PEDIDO">
+        <PropertyRef Name="USUARIO_IDUSUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRODUCTO_INVENTARIO_FK">
+    <End Role="INVENTARIO" Type="Self.INVENTARIO" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INVENTARIO">
+        <PropertyRef Name="IDINVENTARIO" />
+      </Principal>
+      <Dependent Role="PRODUCTO">
+        <PropertyRef Name="INVENTARIO_IDINVENTARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRODUCTO_PEDIDO_FK">
+    <End Role="PEDIDO" Type="Self.PEDIDO" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PEDIDO">
+        <PropertyRef Name="IDPEDIDO" />
+      </Principal>
+      <Dependent Role="PRODUCTO">
+        <PropertyRef Name="PEDIDO_IDPEDIDO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="USUARIO_NIVELUSUARIO_FK">
+    <End Role="NIVELUSUARIO" Type="Self.NIVELUSUARIO" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NIVELUSUARIO">
+        <PropertyRef Name="IDNIVELUSUARIO" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="NIVELUSUARIO_IDNIVELUSUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AdminSushiModelStoreContainer">
+    <EntitySet Name="DIRECCION" EntityType="Self.DIRECCION" Schema="ADMINSUSHI" store:Type="Tables" />
+    <EntitySet Name="INVENTARIO" EntityType="Self.INVENTARIO" Schema="ADMINSUSHI" store:Type="Tables" />
+    <EntitySet Name="NIVELUSUARIO" EntityType="Self.NIVELUSUARIO" Schema="ADMINSUSHI" store:Type="Tables" />
+    <EntitySet Name="PEDIDO" EntityType="Self.PEDIDO" Schema="ADMINSUSHI" store:Type="Tables" />
+    <EntitySet Name="PRODUCTO" EntityType="Self.PRODUCTO" Schema="ADMINSUSHI" store:Type="Tables" />
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="ADMINSUSHI" store:Type="Tables" />
+    <AssociationSet Name="DIRECCION_USUARIO_FK" Association="Self.DIRECCION_USUARIO_FK">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="DIRECCION" EntitySet="DIRECCION" />
+    </AssociationSet>
+    <AssociationSet Name="PEDIDO_DIRECCION_FK" Association="Self.PEDIDO_DIRECCION_FK">
+      <End Role="DIRECCION" EntitySet="DIRECCION" />
+      <End Role="PEDIDO" EntitySet="PEDIDO" />
+    </AssociationSet>
+    <AssociationSet Name="PEDIDO_USUARIO_FK" Association="Self.PEDIDO_USUARIO_FK">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="PEDIDO" EntitySet="PEDIDO" />
+    </AssociationSet>
+    <AssociationSet Name="PRODUCTO_INVENTARIO_FK" Association="Self.PRODUCTO_INVENTARIO_FK">
+      <End Role="INVENTARIO" EntitySet="INVENTARIO" />
+      <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+    </AssociationSet>
+    <AssociationSet Name="PRODUCTO_PEDIDO_FK" Association="Self.PRODUCTO_PEDIDO_FK">
+      <End Role="PEDIDO" EntitySet="PEDIDO" />
+      <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+    </AssociationSet>
+    <AssociationSet Name="USUARIO_NIVELUSUARIO_FK" Association="Self.USUARIO_NIVELUSUARIO_FK">
+      <End Role="NIVELUSUARIO" EntitySet="NIVELUSUARIO" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
