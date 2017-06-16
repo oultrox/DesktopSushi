@@ -6,4 +6,4 @@ Aplicación básica de escritorio para modificar las ordendes para despacharlas,
 
 ## Integrantes
 - Jesús Alberto Pérez Valdez.
-- David Ortega.
+- David Cárdenas.
