@@ -19,7 +19,7 @@ namespace Sushi.Negocio
         }
 
         [DataObjectMethod(DataObjectMethodType.Select)]
-        public List<DALC.PEDIDO> GetPedidosPorTipo(string estado)
+        public List<DALC.PEDIDO> GetPedidosPorEstado(string estado)
         {
             return CommonBC.ModeloSushi.PEDIDO.Where
                 (b => b.ESTADO == estado).ToList();

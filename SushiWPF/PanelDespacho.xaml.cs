@@ -21,7 +21,7 @@ namespace SushiWPF
     public partial class MainWindow : Window
     {
         Sushi.Negocio.PedidoCollection pedidos;
-        public MainWindow()
+        public MainWindow(Sushi.DALC.USUARIO usuario)
         {
             InitializeComponent();
             pedidos = new Sushi.Negocio.PedidoCollection();
@@ -29,12 +29,8 @@ namespace SushiWPF
             CollectionViewSource itemCollectionViewSource;
             itemCollectionViewSource = (CollectionViewSource)(FindResource("pedidoViewSource"));
             //Busca los pedidos en base a su estado -> el nombre del estado debe ser exacto.
-            itemCollectionViewSource.Source = pedidos.GetPedidosPorTipo("PAGADO");
-        }
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            // Cargar datos en la tabla PEDIDO. Puede modificar este código según sea necesario.
-            
+            itemCollectionViewSource.Source = pedidos.GetPedidosPorEstado("PAGADO");
+            this.lbl_username.Content = "Bienvenido, "+ usuario.NOMBRE;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)

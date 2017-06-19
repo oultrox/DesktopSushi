@@ -30,3 +30,37 @@ C:\Users\Yisus\Documents\Visual Studio 2015\Projects\AdminSushiProject\SushiWPF\
 C:\Users\Yisus\Documents\Visual Studio 2015\Projects\AdminSushiProject\SushiWPF\bin\Debug\Sushi.DALC.pdb
 C:\Users\Yisus\Documents\Visual Studio 2015\Projects\AdminSushiProject\SushiWPF\bin\Debug\EntityFramework.xml
 C:\Users\Yisus\Documents\Visual Studio 2015\Projects\AdminSushiProject\SushiWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\bin\Debug\SushiWPF.exe.config
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\obj\Debug\SushiWPF.exe
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\obj\Debug\SushiWPF.pdb
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\bin\Debug\SushiWPF.exe
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\bin\Debug\SushiWPF.pdb
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\bin\Debug\MahApps.Metro.dll
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\bin\Debug\MaterialDesignColors.dll
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\bin\Debug\MaterialDesignThemes.MahApps.dll
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\bin\Debug\Sushi.DALC.dll
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\bin\Debug\Sushi.Negocio.dll
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\bin\Debug\EntityFramework.dll
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\bin\Debug\Sushi.DALC.pdb
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\bin\Debug\Sushi.Negocio.pdb
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\bin\Debug\MahApps.Metro.pdb
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\bin\Debug\MahApps.Metro.xml
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\bin\Debug\EntityFramework.xml
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\obj\Debug\Sushi.WPF.csprojResolveAssemblyReference.cache
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\obj\Debug\App.g.cs
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\obj\Debug\SushiWPF_MarkupCompile.cache
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\obj\Debug\SushiWPF_MarkupCompile.lref
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\obj\Debug\App.baml
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\obj\Debug\SushiWPF.g.resources
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\obj\Debug\SushiWPF.Properties.Resources.resources
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\obj\Debug\Sushi.WPF.csproj.GenerateResource.Cache
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\obj\Debug\PanelDespacho.g.cs
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\obj\Debug\Login.g.cs
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\obj\Debug\Login.baml
+C:\Users\Yisus\Documents\GitHub\DesktopSushi\SushiWPF\obj\Debug\PanelDespacho.baml
