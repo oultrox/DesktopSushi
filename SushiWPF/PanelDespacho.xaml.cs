@@ -24,27 +24,35 @@ namespace SushiWPF
         public MainWindow(Sushi.DALC.USUARIO usuario)
         {
             InitializeComponent();
-            pedidos = new Sushi.Negocio.PedidoCollection();
-
-            CollectionViewSource itemCollectionViewSource;
-            itemCollectionViewSource = (CollectionViewSource)(FindResource("pedidoViewSource"));
-            //Busca los pedidos en base a su estado -> el nombre del estado debe ser exacto.
-            itemCollectionViewSource.Source = pedidos.GetPedidosPorEstado("EN DESPACHO");
-            this.lbl_username.Content = "Bienvenido, "+ usuario.NOMBRE;
+            this.lbl_username.Content = "Bienvenido, " + usuario.NOMBRE;
+            ActualizarLista();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                Sushi.Negocio.PEDIDO pedidox = (Sushi.Negocio.PEDIDO)Dg_pedidos.SelectedItem;
-
+                Sushi.DALC.PEDIDO pedidox = (Sushi.DALC.PEDIDO)Dg_pedidos.SelectedItem;
+                Sushi.Negocio.PEDIDO pedido = new Sushi.Negocio.PEDIDO();
                 if (pedidox != null)
                 {
-                    pedidox.estado = "DESPACHADO";
-                    pedidox.Update();
-                    MessageBox.Show("¡Pedido despachado exitosamente!", "Aviso");
-                    //Sushi.Negocio.PEDIDO pedido = new Sushi.Negocio.PEDIDO();
+                    
+                    pedido.detalle = pedidox.DETALLE;
+                    pedido.direccion_id_direccion = (int)pedidox.DIRECCION_IDDIRECCION;
+                    pedido.fecha = pedidox.FECHA;
+                    pedido.idPedido = (int)pedidox.IDPEDIDO;
+                    pedido.valor = (int)pedidox.VALOR;
+                    pedido.estado = "DESPACHADO";
+                    pedido.usuario_id_usuario = (int)pedidox.USUARIO_IDUSUARIO;
+                    if (pedido.Update())
+                    {
+                        MessageBox.Show("¡Pedido despachado exitosamente!", "Aviso");
+                    }
+                    else
+                    {
+                        MessageBox.Show("¡Pedido seleccionado pero no se ha podido modificar!", "Alerta");
+                    }
+                    ActualizarLista();
 
                 }
                 else
@@ -63,6 +71,17 @@ namespace SushiWPF
         private void Dg_pedidos_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void ActualizarLista()
+        {
+            pedidos = new Sushi.Negocio.PedidoCollection();
+
+            CollectionViewSource itemCollectionViewSource;
+            itemCollectionViewSource = (CollectionViewSource)(FindResource("pedidoViewSource"));
+            //Busca los pedidos en base a su estado -> el nombre del estado debe ser exacto.
+            itemCollectionViewSource.Source = pedidos.GetPedidosPorEstado("EN DESPACHO");
+            
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)

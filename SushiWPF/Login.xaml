@@ -15,7 +15,7 @@
         <Label Content="Correo eléctronico" HorizontalAlignment="Left" Margin="41,64,0,0" VerticalAlignment="Top" BorderBrush="#FF130D0D" Foreground="#DD131313" FontSize="16"/>
         <Label Content="Contraseña" HorizontalAlignment="Left" Margin="41,146,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.132,-0.347" Foreground="#DD272424" BorderBrush="#FFF3EEEE" FontSize="16"/>
         <PasswordBox x:Name="txtPwd" Margin="41,166,49,0" VerticalAlignment="Top" Height="38" Background="Transparent" FontSize="20" KeyDown="txtPwd_KeyDown"/>
-        <Button Content="Ingresar" Margin="41,0,0,71" BorderBrush="Black" Height="41" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="124" Click="Button_Click">
+        <Button x:Name="btnIngresar" Content="Ingresar" Margin="41,0,0,71" BorderBrush="Black" Height="41" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="124" Click="Button_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF57BEE4" Offset="0"/>

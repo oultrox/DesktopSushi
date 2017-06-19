@@ -28,13 +28,22 @@ namespace SushiWPF
 
         private void txtPwd_KeyDown(object sender, KeyEventArgs e)
         {
-            
+            if (e.Key == Key.Enter)
+            {
+                Ingreso();
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            Ingreso();
+        }
+
+
+        private void Ingreso()
+        {
             UsuarioCollection listaUsuarios = new UsuarioCollection();
-            
+
             try
             {
                 txtPwd.Password = Encryptor.MD5Hash(this.txtPwd.Password);
