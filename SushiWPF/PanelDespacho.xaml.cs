@@ -29,7 +29,7 @@ namespace SushiWPF
             CollectionViewSource itemCollectionViewSource;
             itemCollectionViewSource = (CollectionViewSource)(FindResource("pedidoViewSource"));
             //Busca los pedidos en base a su estado -> el nombre del estado debe ser exacto.
-            itemCollectionViewSource.Source = pedidos.GetPedidosPorEstado("PAGADO");
+            itemCollectionViewSource.Source = pedidos.GetPedidosPorEstado("EN DESPACHO");
             this.lbl_username.Content = "Bienvenido, "+ usuario.NOMBRE;
         }
 
